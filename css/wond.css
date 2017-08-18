@@ -1,1 +1,148 @@
+/*
+ * Copyright (c) 2015, MedLex BV
+ */
+{
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+/* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
 
+/*
+ * Fonts and Font-sizes
+ */
+ 
+@font-face
+{
+	font-family: breezeRegular; 
+	src: url('../font/breezregular-webfont.ttf') format('truetype');
+}
+ 
+@font-face
+{
+	font-family: breezeLight; 
+	src: url('../font/breezlight-webfont.ttf') format('truetype');
+}
+ 
+html
+{
+    font-size:small;
+}
+ 
+label
+{
+    font-family:breezeLight, arial, helvetica, sans-serif;
+    font-size:small;
+	display:inline-block;
+}
+
+h1
+{
+    font-family:breezeRegular, arial, helvetica, sans-serif;
+	font-size:large;
+	font-weight:600;
+}
+
+.light
+{
+    font-family:breezeLight, arial, helvetica, sans-serif;
+    font-size:medium;
+}
+ 
+.standard, td, input, p
+{
+    font-family:breezeLight, arial, helvetica, sans-serif;
+    font-size: medium;
+}
+
+.large, select
+{
+    font-family:breezeRegular, arial, helvetica, sans-serif;
+    font-size:medium;
+}
+.button
+{
+    font-family:breezeRegular, arial, helvetica, sans-serif;
+    font-size:large;
+}
+
+.alrijneRoze
+{
+	background-color:#731473;
+}
+
+body
+{
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: text;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    
+    background:transparent;
+    margin:0;
+    padding:0;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    overflow:hidden;
+/*    font-size: 1em; */
+}
+
+#wrapper
+{
+	display:block;
+	position:absolute;
+	top:0px;
+	right:0px;
+	left:0px;
+	bottom:0px;
+	background:#efefef;
+}
+
+#header
+{
+	display:block;
+	position:absolute;
+	top:0px;
+	right:0px;
+	left:0px;
+	height:100px;
+	padding-top:10px;
+	text-align:center;
+	background:transparent url('../img/header.png') no-repeat;
+	background-position:left center;
+	background-size:auto 100px;
+	font-family:breezeRegular, arial, helvetica, sans-serif;
+    font-size:large;
+	font-weight:600;
+}
+
+#payload
+{
+	position:absolute;
+	display:block;
+	left:0px;
+	top:100px;
+	right:0px;
+	bottom:0px;
+	padding:10px;
+}
+
+#jaja
+{
+	position:absolute;
+	display:block;
+	width:74%;
+	left:13%;
+	bottom:10px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	background-color:#731473;
+	color:#ffffff;
+	border-top:solid 8px #731473;
+	border-bottom:solid 8px #731473;
+}
+
+#jaja:hover
+{
+	border-bottom:solid 8px #f0963c;
+}
