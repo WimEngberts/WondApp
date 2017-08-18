@@ -104,8 +104,8 @@ body
 	top:0px;
 	right:0px;
 	left:0px;
-	height:100px;
-	padding-top:10px;
+	height:70px;
+	padding:0px;
 	text-align:center;
 	background:transparent url('../img/header.png') no-repeat;
 	background-position:left center;
@@ -120,7 +120,7 @@ body
 	position:absolute;
 	display:block;
 	left:0px;
-	top:100px;
+	top:70px;
 	right:0px;
 	bottom:0px;
 	padding:10px;
