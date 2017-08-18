@@ -13,13 +13,13 @@
 @font-face
 {
 	font-family: breezeRegular; 
-	src: url('../font/breezregular-webfont.ttf') format('truetype');
+	src: url('../fonts/breezregular-webfont.ttf') format('truetype');
 }
  
 @font-face
 {
 	font-family: breezeLight; 
-	src: url('../font/breezlight-webfont.ttf') format('truetype');
+	src: url('../fonts/breezlight-webfont.ttf') format('truetype');
 }
  
 html
