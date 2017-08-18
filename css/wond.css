@@ -126,6 +126,17 @@ body
 	padding:10px;
 }
 
+#bottom
+{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	height:180px;
+	background:transparent url('../img/bottom.png') no-repeat;
+	background-position:left top;
+}
+
 #jaja
 {
 	position:absolute;
