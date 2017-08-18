@@ -58,11 +58,6 @@ h1
     font-family:breezeRegular, arial, helvetica, sans-serif;
     font-size:medium;
 }
-.button
-{
-    font-family:breezeRegular, arial, helvetica, sans-serif;
-    font-size:large;
-}
 
 .alrijneRoze
 {
@@ -123,7 +118,114 @@ body
 	top:70px;
 	right:0px;
 	bottom:0px;
+}
+
+#disclaim
+{
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:140px;
+	left:0px;
+	display:block;
+	overflow-x:hide;
+	overflow-y:auto;
+	background:#efefef;
 	padding:10px;
+}
+
+#selectFunction
+{
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:140px;
+	left:0px;
+	display:none;
+	overflow-x:hide;
+	overflow-y:auto;
+	background:#efefef;
+	padding:10px;
+}
+
+#btnBeoordeel
+{
+	position:absolute;
+	top:50px;
+}
+
+#btnBehandel
+{
+	position:absolute;
+	top:115px;
+}
+
+#terug
+{
+	left:13%;
+}
+
+#verder
+{
+	right:13%;
+}
+
+.page
+{
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:140px;
+	left:0px;
+	display:none;
+	overflow-x:hide;
+	overflow-y:auto;
+	background:#efefef;
+	padding:10px;
+}
+
+.button
+{
+	position:absolute;
+	display:block;
+	width:74%;
+	left:13%;
+	height:40px;
+	border-top:solid 8px #731473;
+	border-bottom:solid 8px #731473;
+	background-color:#731473;
+	color:#ffffff;
+	line-height:40px;
+	text-align:center;
+    font-family:breezeRegular, arial, helvetica, sans-serif;
+    font-size:large;
+}
+
+.button:hover
+{
+	border-bottom:solid 8px #f0963c;
+}
+
+.button2
+{
+	position:absolute;
+	width:35%;
+	height:40px;
+	border-top:solid 8px #731473;
+	border-bottom:solid 8px #731473;
+	background-color:#731473;
+	color:#ffffff;
+	line-height:40px;
+	text-align:center;
+    font-family:breezeRegular, arial, helvetica, sans-serif;
+    font-size:large;
+	bottom:10px;
+	display:none;
+}
+
+.button2:hover
+{
+	border-bottom:solid 8px #f0963c;
 }
 
 #bottom
@@ -132,28 +234,12 @@ body
 	bottom:0px;
 	left:0px;
 	right:0px;
-	height:180px;
+	height:140px;
 	background:transparent url('../img/bottom.png') no-repeat;
 	background-position:left top;
 }
 
 #jaja
 {
-	position:absolute;
-	display:block;
-	width:74%;
-	left:13%;
 	bottom:10px;
-	height:40px;
-	line-height:40px;
-	text-align:center;
-	background-color:#731473;
-	color:#ffffff;
-	border-top:solid 8px #731473;
-	border-bottom:solid 8px #731473;
-}
-
-#jaja:hover
-{
-	border-bottom:solid 8px #f0963c;
 }
