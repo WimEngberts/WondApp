@@ -260,8 +260,8 @@ input[type="radio"]
 input[type="radio"] + label span
 {
     display:inline-block;
-    width:20px;
-    height:20px;
+    width:24px;
+    height:24px;
     margin:-2px 10px 0 0;
     vertical-align:middle;
     background:url(../img/sprite.png) left top no-repeat;
@@ -270,7 +270,7 @@ input[type="radio"] + label span
 
 input[type="radio"]:checked + label span
 {
-    background:url(../img/sprite.png) -20px top no-repeat;
+    background:url(../img/sprite.png) -24px top no-repeat;
 }
 
 input[type="checkbox"]
@@ -280,15 +280,15 @@ input[type="checkbox"]
 input[type="checkbox"] + label span
 {
     display:inline-block;
-    width:20px;
-    height:20px;
+    width:24px;
+    height:24px;
     margin:-2px 10px 0 0;
     vertical-align:middle;
-    background:url(../img/sprite.png) -40px top no-repeat;
+    background:url(../img/sprite.png) -48px top no-repeat;
     cursor:pointer;
 }
 
 input[type="checkbox"]:checked + label span
 {
-    background:url(../img/sprite.png) -60px top no-repeat;
+    background:url(../img/sprite.png) -72px top no-repeat;
 }
