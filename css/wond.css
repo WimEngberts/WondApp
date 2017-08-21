@@ -193,6 +193,26 @@ body
 	padding:10px;
 }
 
+#result
+{
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:140px;
+	left:0px;
+	display:none;
+	overflow-x:hide;
+	overflow-y:auto;
+	background:#efefef;
+	padding:10px;
+}
+
+#overnieuw
+{
+	display:none;
+	bottom:10px;
+}
+
 .button
 {
 	position:absolute;
@@ -251,6 +271,17 @@ body
 #jaja
 {
 	bottom:10px;
+}
+
+#voetstand
+{
+	display:none;
+	position:absolute;
+	top:auto;
+	left:40px;
+	right:0px;
+	height:auto;
+	background:transparent;
 }
 
 input[type="radio"]
