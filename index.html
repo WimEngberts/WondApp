@@ -91,7 +91,8 @@
 					</p>
 				</form>
 			</div>
-			<div id="04" class="page">				<form>
+			<div id="04" class="page">
+				<form>
 					<h2>Is er sprake van koorts of ziek zijn?</h2><br />
 					<p>
 						<input type="radio" id="c041" name="cc" />
@@ -107,7 +108,7 @@
 			</div>
 			<div id="05" class="page">
 				<form>
-					<h2>Voorgeschiedenis</h2><br />
+					<h2>Voorgeschiedenis</h2>(meerdere keuzes mogelijk)<br />
 					<p>
 						<input type="checkbox" id="c051" name="cc" />
 						<label for="c051"><span></span>Vasculair (cardiologisch, neurologisch, centraal, perifeer)</label>
@@ -124,26 +125,118 @@
 				</form>
 			</div>
 			<div id="06" class="page">
-				<p>Huid en omgeving van de wond</p>
+				<form>
+					<h2>Huid en omgeving van de wond</h2><br />
+					<p>
+						<input type="radio" id="c061" name="cc" />
+						<label for="c061"><span></span>Rustig</label>
+					</p><p>
+						<input type="radio" id="c062" name="cc" />
+						<label for="c062"><span></span>Erythemateus (rood)</label>
+					</p><p>
+						<input type="radio" id="c063" name="cc" />
+						<label for="c063"><span></span>Geirriteerd/schilferig</label>
+					</p><p>
+						<input type="radio" id="c064" name="cc" />
+						<label for="c064"><span></span>Necrotisch (dood/bedreigd)</label>
+					</p>
+				</form>
 			</div>
 			<div id="07" class="page">
-				<p>Mate van oedeem (zwelling)</p>
+				<form>
+					<h2>Mate van oedeem (zwelling)</h2><br />
+					<p>
+						<input type="radio" id="c071" name="cc" />
+						<label for="c071"><span></span>Geen</label>
+					</p><p>
+						<input type="radio" id="c072" name="cc" />
+						<label for="c072"><span></span>Matig</label>
+					</p><p>
+						<input type="radio" id="c073" name="cc" />
+						<label for="c073"><span></span>Fors</label>
+					</p>
+				</form>
 			</div>
 			<div id="08" class="page">
-				<p>Capillaire refill</p>
+				<form>
+					<h2>Capillaire refill</h2><br />
+					<p>
+						<input type="radio" id="c081" name="cc" />
+						<label for="c081"><span></span>&lt; 3 sec</label>
+					</p><p>
+						<input type="radio" id="c082" name="cc" />
+						<label for="c082"><span></span>&gt; 3 sec</label>
+					</p><p>
+						<input type="radio" id="c083" name="cc" />
+						<label for="c083"><span></span>Onbekend</label>
+					</p>
+				</form>
 			</div>
 			<div id="09" class="page">
-				<p>Arteriele pulsaties aanwezig op de voet?</p>
+				<form>
+					<h2>Arteriele pulsaties aanwezig op de voet?</h2><br />
+					<p>
+						<input type="radio" id="c091" name="cc" />
+						<label for="c091"><span></span>Duidelijk aanwezig</label>
+					</p><p>
+						<input type="radio" id="c092" name="cc" />
+						<label for="c092"><span></span>Zwak/dubieus</label>
+					</p><p>
+						<input type="radio" id="c093" name="cc" />
+						<label for="c093"><span></span>Afwezig</label>
+					</p>
+				</form>
 			</div>
 			<div id="10" class="page">
-				<p>Sensibiliteit (gevoel)</p>
+				<form>
+					<h2>Sensibiliteit (gevoel)</h2><br />
+					<p>
+						<input type="radio" id="c101" name="cc" />
+						<label for="c101"><span></span>Normaal</label>
+					</p><p>
+						<input type="radio" id="c102" name="cc" />
+						<label for="c102"><span></span>Gestoord</label>
+					</p>
+				</form>
 			</div>
 			<div id="11" class="page">
-				<p>Standsafwijking voet?</p>
+				<form>
+					<h2>Standsafwijking voet?</h2><br />
+					<p>
+						<input type="radio" id="c111" name="cc" onclick="clickVoet();" />
+						<label for="c111"><span></span>Geen</label>
+					</p><p>
+						<input type="radio" id="c112" name="cc" onclick="clickVoet();" />
+						<label for="c112"><span></span>Wel</label>
+					</p>
+				</form>
+				<div id="voetstand">
+					<form>
+						<p>
+							<input type="radio" id="c113" name="cc" />
+							<label for="c113"><span></span>Hamertenen/klauwtenen</label>
+						</p><p>
+							<input type="radio" id="c114" name="cc" />
+							<label for="c114"><span></span>Spitsstand voorvoet</label>
+						</p><p>
+							<input type="radio" id="c115" name="cc" />
+							<label for="c115"><span></span>Platvoet/holvoet</label>
+						</p><p>
+							<input type="radio" id="c116" name="cc" />
+							<label for="c116"><span></span>Stijfheid in de gewrichten</label>
+						</p>
+					</form>
+				</div>
+			</div>
+			<div id="result">
+				<h2>Resultaat</h2><br />
+				<p>Met de nu ingevulde gegevens is een totaalscore van <span id="totalScore"></span> vastgesteld.</p>
+				<p id="voorstel"></p>
 			</div>
 		</div>
 		<div id="bottom"></div>
 		<div id="jaja" class="button" onclick="accept();">Ik begrijp het</div>
+		<div id="overnieuw" class="button" onclick="overnieuw();">OK</div>
 		<div id="terug" class="button2" onclick="terug()">Terug</div>
 		<div id="verder" class="button2" onclick="verder()">Verder</div>
 	</div>
