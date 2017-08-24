@@ -50,13 +50,13 @@ function verder()
 		nPoints = getContribution (nPoints, 'c092', 1);
 		nPoints = getContribution (nPoints, 'c093', 1);
 		nPoints = getContribution (nPoints, 'c102', 1);
-		document.getElementById ('totalScore').innerHTML = nPoints;
+//		document.getElementById ('totalScore').innerHTML = nPoints;
 		if (nPoints < 3)
-			document.getElementById ('voorstel').innerHTML = 'Op grond hiervan is geen noodzaak tot overleg of insturen';
+			document.getElementById ('voorstel').innerHTML = 'Op grond van de ingevulde gegevens is geen noodzaak tot overleg of insturen';
 		else if (nPoints < 6)
-			document.getElementById ('voorstel').innerHTML = 'Op grond hiervan adviseren wij overleg met het Alrijne wondcentrum';
+			document.getElementById ('voorstel').innerHTML = 'Op grond van de ingevulde gegevens adviseren wij overleg met het Alrijne wondcentrum';
 		else
-			document.getElementById ('voorstel').innerHTML = 'Op grond hiervan adviseren wij direct overleg met de (huis)arts';
+			document.getElementById ('voorstel').innerHTML = 'Op grond van de ingevulde gegevens adviseren wij direct overleg met de (huis)arts';
 		setVisibility ('result', true);
 		setVisibility ('overnieuw', true);
 		setVisibility ('verder', false);
