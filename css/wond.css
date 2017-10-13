@@ -193,6 +193,20 @@ body
 	padding:10px;
 }
 
+.pageVisible
+{
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:140px;
+	left:0px;
+	display:block;
+	overflow-x:hide;
+	overflow-y:auto;
+	background:#efefef;
+	padding:10px;
+}
+
 #result
 {
 	position:absolute;
@@ -374,6 +388,20 @@ input[type="checkbox"]:checked + label span
 	margin-left:-15px;
 }
 
+#middelen
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	padding:0;
+	margin:0;
+	display:none;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease; /* For Safari 3.1 to 6.0 */
+}
+
 #wondvocht
 {
 	display:none;
@@ -431,6 +459,12 @@ input[type="checkbox"]:checked + label span
 .menuBeoordeel
 {
 	background:transparent url('../img/beoordeel.png') no-repeat left center;
+	background-size:28px;
+}
+
+.menuMiddelen
+{
+	background:transparent url('../img/middelen.png') no-repeat left center;
 	background-size:28px;
 }
 
