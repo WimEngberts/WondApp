@@ -37,6 +37,7 @@ function behandel ()
 	setVisibility ("behandel", true);
 	setVisibility ('door', true);
 	setVisibility ('flow', true);
+	setVisibility ('middelen', false);
 }
 
 function door ()
@@ -235,7 +236,14 @@ function beoordeel ()
 	setVisibility ('terug', true);
 	setVisibility ("beoordeel", true);
 	setVisibility ("behandel", false);
+	setVisibility ('middelen', false);
 	showPage (1);
+}
+
+function middelen ()
+{
+	closeMenu ();
+	setVisibility ('middelen', true);
 }
 
 function showPage (number)
