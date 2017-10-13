@@ -273,6 +273,12 @@ body
 	bottom:10px;
 }
 
+#door
+{
+	bottom:10px;
+	display:none;
+}
+
 #voetstand
 {
 	display:none;
@@ -322,4 +328,121 @@ input[type="checkbox"] + label span
 input[type="checkbox"]:checked + label span
 {
     background:url(../img/sprite.png) -72px top no-repeat;
+}
+
+/*-------------------------------------------------------------------------------
+ * container voor de sectie beoordeling
+ */
+#beoordeel
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	padding:0;
+	margin:0;
+	display:none;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease; /* For Safari 3.1 to 6.0 */
+}
+
+/*-------------------------------------------------------------------------------
+ * container voor de sectie behandeling
+ */
+#behandel
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	padding:0;
+	margin:0;
+	display:none;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease; /* For Safari 3.1 to 6.0 */
+}
+
+#behandel table
+{
+	border-collapse: collapse;
+}
+
+#behandel td label
+{
+	margin-left:-15px;
+}
+
+#wondvocht
+{
+	display:none;
+}
+
+#menuWrap
+{
+	position:absolute;
+	display:block;
+	right:-50%;
+	height:100%;
+	top:0%;
+	background:#731373;
+	width:50%;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease; /* For Safari 3.1 to 6.0 */
+}
+
+#menu
+{
+	position:absolute;
+	top:70px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	display:block;
+	background:transparent;
+	padding:8px;
+	color:#ffffff;
+}
+
+.menu
+{
+	margin-top:5px;
+	padding-left:35px;
+	display:inline-block;
+	height:30px;
+	line-height:30px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.menuReset
+{
+	background:transparent url('../img/redo.png') no-repeat left center;
+	background-size:28px;
+}
+
+.menuBehandel
+{
+	background:transparent url('../img/treat.png') no-repeat left center;
+	background-size:28px;
+}
+
+.menuBeoordeel
+{
+	background:transparent url('../img/beoordeel.png') no-repeat left center;
+	background-size:28px;
+}
+
+.menuSluit
+{
+	background:transparent url('../img/close.png') no-repeat left center;
+	background-size:28px;
+}
+
+#menuimg
+{
+	margin-top:5px;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease; /* For Safari 3.1 to 6.0 */
 }
