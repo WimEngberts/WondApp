@@ -25,217 +25,304 @@
 </head>
 <body>
     <div id="wrapper" style="top:0px;">
-		<div id="header" class="large">Wondzorg</div>
 		<div id="payload" class="light">
 			<div id="disclaim">
 				<h1>Disclaimer</h1>
-				<p>Wij als MedLex zijn helemaal gek op open stinkende wonden. Een beetje etterend als het effe kan!
-				Mooi rood en zo daar worden we helemaal blij van!<br />
-				<p>Als jij dat ook allemaal net zo leuk vind als wij, dan moet je nu vooral verder gaan!!</p>
+				<p>Deze app ondersteunt de zorgprofessional bij het beoordelen van een wond.<br />
+				   Op basis van deze beoordeling kan een advies worden gegeven over de juiste behandeling.</p>
+				<p>Het is nadrukkelijk de verantwoordelijkheid van de gebruiker van deze app om de juiste beoordeling te doen
+				   en de juiste behandeling uit te voeren. Deze app kan daarbij alleen een ondersteunende rol spelen.</p>
+				<p>Medlex wijst nadrukkelijk alle verantwoordelijkheid af voor
+				   fouten in de boordeling of behandeling zelfs als deze het gevolg zijn van onjuistheden in de informatie in deze app.</p>
 			</div>
 			<div id="selectFunction">
 				<div id="btnBeoordeel" class="button" onclick="beoordeel();">Beoordeel</div>
 				<div id="btnBehandel" class="button" onclick="behandel();">Behandel</div>
 			</div>
-			<div id="01" class="page">
-				<form>
-					<h2>Hoe lang bestaat de wond al?</h2><br />
-					<p>
-						<input type="radio" id="c011" name="cc" />
-						<label for="c011"><span></span>1-4 weken</label>
-					</p><p>
-						<input type="radio" id="c012" name="cc" />
-						<label for="c012"><span></span>4-12 weken</label>
-					</p><p>
-						<input type="radio" id="c013" name="cc" />
-						<label for="c013"><span></span>3-6 maanden</label>
-					</p><p>
-						<input type="radio" id="c014" name="cc" />
-						<label for="c014"><span></span>Langer dan 6 maanden</label>
-					</p>
-				</form>
-			</div>
-			<div id="02" class="page">
-				<form>
-					<h2>Hoe is de wond ontstaan?</h2><br />
-					<p>
-						<input type="radio" id="c021" name="cc" />
-						<label for="c021"><span></span>Trauma (stoten, val, enz)</label>
-					</p><p>
-						<input type="radio" id="c022" name="cc" />
-						<label for="c022"><span></span>Post-operatief</label>
-					</p><p>
-						<input type="radio" id="c023" name="cc" />
-						<label for="c023"><span></span>Spontaan</label>
-					</p><p>
-						<input type="radio" id="c024" name="cc" />
-						<label for="c024"><span></span>Onduidelijk</label>
-					</p>
-				</form>
-			</div>
-			<div id="03" class="page">
-				<form>
-					<h2>Is de wond pijnlijk?</h2><br />
-					<p>
-						<input type="radio" id="c031" name="cc" />
-						<label for="c031"><span></span>Nee</label>
-					</p><p>
-						<input type="radio" id="c032" name="cc" />
-						<label for="c032"><span></span>Ja, bij aanraking</label>
-					</p><p>
-						<input type="radio" id="c033" name="cc" />
-						<label for="c033"><span></span>Ja, constant</label>
-					</p><p>
-						<input type="radio" id="c034" name="cc" />
-						<label for="c034"><span></span>Ja, voornamelijk 's nachts</label>
-					</p>
-				</form>
-			</div>
-			<div id="04" class="page">
-				<form>
-					<h2>Is er sprake van koorts of ziek zijn?</h2><br />
-					<p>
-						<input type="radio" id="c041" name="cc" />
-						<label for="c041"><span></span>Nee</label>
-					</p><p>
-						<input type="radio" id="c042" name="cc" />
-						<label for="c042"><span></span>Ja, maar geen koorts</label>
-					</p><p>
-						<input type="radio" id="c043" name="cc" />
-						<label for="c043"><span></span>Ja, tevens koorts</label>
-					</p>
-				</form>
-			</div>
-			<div id="05" class="page">
-				<form>
-					<h2>Voorgeschiedenis</h2>(meerdere keuzes mogelijk)<br />
-					<p>
-						<input type="checkbox" id="c051" name="cc" />
-						<label for="c051"><span></span>Vasculair (cardiologisch, neurologisch, centraal, perifeer)</label>
-					</p><p>
-						<input type="checkbox" id="c052" name="cc" />
-						<label for="c052"><span></span>Diabetes Mellitus</label>
-					</p><p>
-						<input type="checkbox" id="c053" name="cc" />
-						<label for="c053"><span></span>Dialyse afhankelijk</label>
-					</p><p>
-						<input type="checkbox" id="c054" name="cc" />
-						<label for="c054"><span></span>Operaties</label>
-					</p>
-				</form>
-			</div>
-			<div id="06" class="page">
-				<form>
-					<h2>Huid en omgeving van de wond</h2><br />
-					<p>
-						<input type="radio" id="c061" name="cc" />
-						<label for="c061"><span></span>Rustig</label>
-					</p><p>
-						<input type="radio" id="c062" name="cc" />
-						<label for="c062"><span></span>Erythemateus (rood)</label>
-					</p><p>
-						<input type="radio" id="c063" name="cc" />
-						<label for="c063"><span></span>Geirriteerd/schilferig</label>
-					</p><p>
-						<input type="radio" id="c064" name="cc" />
-						<label for="c064"><span></span>Necrotisch (dood/bedreigd)</label>
-					</p>
-				</form>
-			</div>
-			<div id="07" class="page">
-				<form>
-					<h2>Mate van oedeem (zwelling)</h2><br />
-					<p>
-						<input type="radio" id="c071" name="cc" />
-						<label for="c071"><span></span>Geen</label>
-					</p><p>
-						<input type="radio" id="c072" name="cc" />
-						<label for="c072"><span></span>Matig</label>
-					</p><p>
-						<input type="radio" id="c073" name="cc" />
-						<label for="c073"><span></span>Fors</label>
-					</p>
-				</form>
-			</div>
-			<div id="08" class="page">
-				<form>
-					<h2>Capillaire refill</h2><br />
-					<p>
-						<input type="radio" id="c081" name="cc" />
-						<label for="c081"><span></span>&lt; 3 sec</label>
-					</p><p>
-						<input type="radio" id="c082" name="cc" />
-						<label for="c082"><span></span>&gt; 3 sec</label>
-					</p><p>
-						<input type="radio" id="c083" name="cc" />
-						<label for="c083"><span></span>Onbekend</label>
-					</p>
-				</form>
-			</div>
-			<div id="09" class="page">
-				<form>
-					<h2>Arteriele pulsaties aanwezig op de voet?</h2><br />
-					<p>
-						<input type="radio" id="c091" name="cc" />
-						<label for="c091"><span></span>Duidelijk aanwezig</label>
-					</p><p>
-						<input type="radio" id="c092" name="cc" />
-						<label for="c092"><span></span>Zwak/dubieus</label>
-					</p><p>
-						<input type="radio" id="c093" name="cc" />
-						<label for="c093"><span></span>Afwezig</label>
-					</p>
-				</form>
-			</div>
-			<div id="10" class="page">
-				<form>
-					<h2>Sensibiliteit (gevoel)</h2><br />
-					<p>
-						<input type="radio" id="c101" name="cc" />
-						<label for="c101"><span></span>Normaal</label>
-					</p><p>
-						<input type="radio" id="c102" name="cc" />
-						<label for="c102"><span></span>Gestoord</label>
-					</p>
-				</form>
-			</div>
-			<div id="11" class="page">
-				<form>
-					<h2>Standsafwijking voet?</h2><br />
-					<p>
-						<input type="radio" id="c111" name="cc" onclick="clickVoet();" />
-						<label for="c111"><span></span>Geen</label>
-					</p><p>
-						<input type="radio" id="c112" name="cc" onclick="clickVoet();" />
-						<label for="c112"><span></span>Wel</label>
-					</p>
-				</form>
-				<div id="voetstand">
+			<div id="beoordeel">
+				<div id="01" class="page">
 					<form>
+						<h2>Hoe lang bestaat de wond al?</h2><br />
 						<p>
-							<input type="radio" id="c113" name="cc" />
-							<label for="c113"><span></span>Hamertenen/klauwtenen</label>
+							<input type="radio" id="c011" name="cc" />
+							<label for="c011"><span></span>1-4 weken</label>
 						</p><p>
-							<input type="radio" id="c114" name="cc" />
-							<label for="c114"><span></span>Spitsstand voorvoet</label>
+							<input type="radio" id="c012" name="cc" />
+							<label for="c012"><span></span>4-12 weken</label>
 						</p><p>
-							<input type="radio" id="c115" name="cc" />
-							<label for="c115"><span></span>Platvoet/holvoet</label>
+							<input type="radio" id="c013" name="cc" />
+							<label for="c013"><span></span>3-6 maanden</label>
 						</p><p>
-							<input type="radio" id="c116" name="cc" />
-							<label for="c116"><span></span>Stijfheid in de gewrichten</label>
+							<input type="radio" id="c014" name="cc" />
+							<label for="c014"><span></span>Langer dan 6 maanden</label>
 						</p>
 					</form>
 				</div>
+				<div id="02" class="page">
+					<form>
+						<h2>Hoe is de wond ontstaan?</h2><br />
+						<p>
+							<input type="radio" id="c021" name="cc" />
+							<label for="c021"><span></span>Trauma (stoten, val, enz)</label>
+						</p><p>
+							<input type="radio" id="c022" name="cc" />
+							<label for="c022"><span></span>Post-operatief</label>
+						</p><p>
+							<input type="radio" id="c023" name="cc" />
+							<label for="c023"><span></span>Spontaan</label>
+						</p><p>
+							<input type="radio" id="c024" name="cc" />
+							<label for="c024"><span></span>Onduidelijk</label>
+						</p>
+					</form>
+				</div>
+				<div id="03" class="page">
+					<form>
+						<h2>Is de wond pijnlijk?</h2><br />
+						<p>
+							<input type="radio" id="c031" name="cc" />
+							<label for="c031"><span></span>Nee</label>
+						</p><p>
+							<input type="radio" id="c032" name="cc" />
+							<label for="c032"><span></span>Ja, bij aanraking</label>
+						</p><p>
+							<input type="radio" id="c033" name="cc" />
+							<label for="c033"><span></span>Ja, constant</label>
+						</p><p>
+							<input type="radio" id="c034" name="cc" />
+							<label for="c034"><span></span>Ja, voornamelijk 's nachts</label>
+						</p>
+					</form>
+				</div>
+				<div id="04" class="page">
+					<form>
+						<h2>Is er sprake van koorts of ziek zijn?</h2><br />
+						<p>
+							<input type="radio" id="c041" name="cc" />
+							<label for="c041"><span></span>Nee</label>
+						</p><p>
+							<input type="radio" id="c042" name="cc" />
+							<label for="c042"><span></span>Ja, maar geen koorts</label>
+						</p><p>
+							<input type="radio" id="c043" name="cc" />
+							<label for="c043"><span></span>Ja, tevens koorts</label>
+						</p>
+					</form>
+				</div>
+				<div id="05" class="page">
+					<form>
+						<h2>Voorgeschiedenis</h2>(meerdere keuzes mogelijk)<br />
+						<p>
+							<input type="checkbox" id="c051" name="cc" />
+							<label for="c051"><span></span>Vasculair (cardiologisch, neurologisch, centraal, perifeer)</label>
+						</p><p>
+							<input type="checkbox" id="c052" name="cc" />
+							<label for="c052"><span></span>Diabetes Mellitus</label>
+						</p><p>
+							<input type="checkbox" id="c053" name="cc" />
+							<label for="c053"><span></span>Dialyse afhankelijk</label>
+						</p><p>
+							<input type="checkbox" id="c054" name="cc" />
+							<label for="c054"><span></span>Operaties</label>
+						</p>
+					</form>
+				</div>
+				<div id="06" class="page">
+					<form>
+						<h2>Huid en omgeving van de wond</h2><br />
+						<p>
+							<input type="radio" id="c061" name="cc" />
+							<label for="c061"><span></span>Rustig</label>
+						</p><p>
+							<input type="radio" id="c062" name="cc" />
+							<label for="c062"><span></span>Erythemateus (rood)</label>
+						</p><p>
+							<input type="radio" id="c063" name="cc" />
+							<label for="c063"><span></span>Geirriteerd/schilferig</label>
+						</p><p>
+							<input type="radio" id="c064" name="cc" />
+							<label for="c064"><span></span>Necrotisch (dood/bedreigd)</label>
+						</p>
+					</form>
+				</div>
+				<div id="07" class="page">
+					<form>
+						<h2>Mate van oedeem (zwelling)</h2><br />
+						<p>
+							<input type="radio" id="c071" name="cc" />
+							<label for="c071"><span></span>Geen</label>
+						</p><p>
+							<input type="radio" id="c072" name="cc" />
+							<label for="c072"><span></span>Matig</label>
+						</p><p>
+							<input type="radio" id="c073" name="cc" />
+							<label for="c073"><span></span>Fors</label>
+						</p>
+					</form>
+				</div>
+				<div id="08" class="page">
+					<form>
+						<h2>Capillaire refill</h2><br />
+						<p>
+							<input type="radio" id="c081" name="cc" />
+							<label for="c081"><span></span>&lt; 3 sec</label>
+						</p><p>
+							<input type="radio" id="c082" name="cc" />
+							<label for="c082"><span></span>&gt; 3 sec</label>
+						</p><p>
+							<input type="radio" id="c083" name="cc" />
+							<label for="c083"><span></span>Onbekend</label>
+						</p>
+					</form>
+				</div>
+				<div id="09" class="page">
+					<form>
+						<h2>Arteriele pulsaties aanwezig op de voet?</h2><br />
+						<p>
+							<input type="radio" id="c091" name="cc" />
+							<label for="c091"><span></span>Duidelijk aanwezig</label>
+						</p><p>
+							<input type="radio" id="c092" name="cc" />
+							<label for="c092"><span></span>Zwak/dubieus</label>
+						</p><p>
+							<input type="radio" id="c093" name="cc" />
+							<label for="c093"><span></span>Afwezig</label>
+						</p>
+					</form>
+				</div>
+				<div id="10" class="page">
+					<form>
+						<h2>Sensibiliteit (gevoel)</h2><br />
+						<p>
+							<input type="radio" id="c101" name="cc" />
+							<label for="c101"><span></span>Normaal</label>
+						</p><p>
+							<input type="radio" id="c102" name="cc" />
+							<label for="c102"><span></span>Gestoord</label>
+						</p>
+					</form>
+				</div>
+				<div id="11" class="page">
+					<form>
+						<h2>Standsafwijking voet?</h2><br />
+						<p>
+							<input type="radio" id="c111" name="cc" onclick="clickVoet();" />
+							<label for="c111"><span></span>Geen</label>
+						</p><p>
+							<input type="radio" id="c112" name="cc" onclick="clickVoet();" />
+							<label for="c112"><span></span>Wel</label>
+						</p>
+					</form>
+					<div id="voetstand">
+						<form>
+							<p>
+								<input type="radio" id="c113" name="cc" />
+								<label for="c113"><span></span>Hamertenen/klauwtenen</label>
+							</p><p>
+								<input type="radio" id="c114" name="cc" />
+								<label for="c114"><span></span>Spitsstand voorvoet</label>
+							</p><p>
+								<input type="radio" id="c115" name="cc" />
+								<label for="c115"><span></span>Platvoet/holvoet</label>
+							</p><p>
+								<input type="radio" id="c116" name="cc" />
+								<label for="c116"><span></span>Stijfheid in de gewrichten</label>
+							</p>
+						</form>
+					</div>
+				</div>
+				<div id="result">
+					<h2>Resultaat</h2><br />
+	<!--				<p>Met de nu ingevulde gegevens is een totaalscore van <span id="totalScore"></span> vastgesteld.</p> -->
+					<p id="voorstel"></p>
+				</div>
 			</div>
-			<div id="result">
-				<h2>Resultaat</h2><br />
-<!--				<p>Met de nu ingevulde gegevens is een totaalscore van <span id="totalScore"></span> vastgesteld.</p> -->
-				<p id="voorstel"></p>
+			<div id="behandel">
+				<div id="flow" class="page" style="display:block">
+					<form>
+						<h2>Fase van de wond</h2>
+						<table>
+							<tr>
+								<td>
+									<input type="checkbox" id="fase01" name="cc" onclick="onClickFase();" /><label for="fase01"><span></span></label>	
+								</td><td>
+									<label for="fase01"><span></span>Debridement<br />
+									<i><span style="font-size:small">Kenmerken: necrose en/of beslag. Doel: verwijderen/reinigen</i></span></label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="fase02" name="cc" onclick="onClickFase();" /><label for="fase02"><span></span></label>
+								</td><td>
+									<label for="fase02"><span></span>Granulatie<br />
+									<i><span style="font-size:small">Kenmerken: roze/rood weefsel. Doel: beschermen/stimuleren</i></span></label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="fase03" name="cc" onclick="onClickFase();" /><label for="fase03"><span></span></label>
+								</td><td>
+									<label for="fase03"><span></span>Epithelialisatie<br />
+									<i><span style="font-size:small">Kenmerken: huidvorming. Doel: beschermen/stimuleren</i></span></label>
+								</td>
+							</tr>
+						</table>
+					</form>
+					<form>
+						<h2>Wondinfectie</h2>
+						<table>
+							<tr>
+								<td>
+									<input type="radio" id="infect01" name="cc" /><label for="infect01"><span></span></label>	
+								</td><td>
+									<label for="infect01"><span></span>Ja</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="radio" id="infect02" name="cc" /><label for="infect02"><span></span></label>
+								</td><td>
+									<label for="infect02"><span></span>Nee</label>
+								</td>
+							</tr>
+						</table>
+					</form>
+					<form id="wondvocht">
+						<h2>Hoeveelheid wondvocht</h2>
+						<table>
+							<tr>
+								<td>
+									<input type="radio" id="vocht01" name="cc" /><label for="vocht01"><span></span></label>	
+								</td><td>
+									<label for="vocht01"><span></span>Droog</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="radio" id="vocht02" name="cc" /><label for="vocht02"><span></span></label>
+								</td><td>
+									<label for="vocht02"><span></span>Nat/vochtig</label>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+				<div id="suggest" class="page">
+				</div>
 			</div>
 		</div>
+		<div id="menuWrap">
+			<div id="menu" class="standard">
+				<div class="menu menuReset" onclick="reset();">Opnieuw</div><br />
+				<div class="menu menuBeoordeel" onclick="beoordeel();">Beoordeel</div><br />
+				<div class="menu menuBehandel" onclick="behandel();">Behandel</div><br />
+				<div class="menu menuSluit" onclick="closeMenu();">Sluit menu</div><br />
+			</div>
+		</div>
+		<div id="header" class="large"><img id="menuimg" src='img/menu.png' onclick="onClickMenu();" /></div>
 		<div id="bottom"></div>
 		<div id="jaja" class="button" onclick="accept();">Ik begrijp het</div>
+		<div id="door" class="button" onclick="door();">Verder</div>
 		<div id="overnieuw" class="button" onclick="overnieuw();">OK</div>
 		<div id="terug" class="button2" onclick="terug()">Terug</div>
 		<div id="verder" class="button2" onclick="verder()">Verder</div>
