@@ -26,6 +26,116 @@ function setVisibility(id, nVisible)
         e.style.display = 'block';
 }
 
+function behandel ()
+{
+	closeMenu ();
+	setVisibility ('selectFunction', false);
+	setVisibility ('disclaim', false);
+	setVisibility ('verder', false);
+	setVisibility ('terug', false);
+	setVisibility ("beoordeel", false);
+	setVisibility ("behandel", true);
+	setVisibility ('door', true);
+	setVisibility ('flow', true);
+}
+
+function door ()
+{
+	var tekst = document.getElementById ('suggest');
+	var debridement    = document.getElementById ('fase01').checked;
+	var granulatie     = document.getElementById ('fase02').checked;
+	var epitheliasatie = document.getElementById ('fase03').checked;
+	var infectie       = document.getElementById ('infect01').checked;
+	var vochtig        = document.getElementById ('vocht02').checked;
+	var html = '<h2>Ingevoerde gegevens</h2><ul><li>';
+	if (!debridement)
+		html += 'Geen d';
+	else
+		html += 'D';
+	html += 'ebridement</li><li>';
+	if (!granulatie)
+		html += 'Geen g';
+	else
+		html += 'G';
+	html += 'ranulatie</li><li>';
+	if (!epitheliasatie)
+		html += 'Geen e';
+	else
+		html += 'E';
+	html += 'pitheliasatie</li><li>';
+	if (!infectie)
+		html += 'Geen w';
+	else
+		html += 'W';
+	html += 'ondinfectie</li><li>';
+	if (vochtig)
+		html += 'Natte/vochtige';
+	else
+		html += 'Droge';
+	html += ' wond</li></ul><h2>Behandeling</h2><p>';
+	if (    debridement
+	    && !granulatie
+		&& !epitheliasatie
+	    && !infectie
+		&& !vochtig)
+		html += 'De wond droog houden, eventueel dun zinkolie opbrengen</p>';
+	else if (    debridement
+			 && !granulatie
+			 && !epitheliasatie
+	         &&  infectie
+			 &&  vochtig)
+	{
+		html += 'Necrose/beslag verwijderen:</p><ul><li>Chirurgisch debridement</li>'
+		html += '<li>Alginaat</li>';
+		html += '<li>Novuxol(r) + siliconengaas + absorberend verband - Eusol + absorberend verband</li>';
+		html += '<li>Wondranden beschermen</li></ul>';
+	}
+	else if (    granulatie
+	         && !epitheliasatie
+			 && !infectie
+			 && !vochtig)
+	{
+		html += 'Oppervlakkig:</p><ul><li>Schuimverband</li>'
+		html += '<li>Eventueel hydrogel</li>';
+		html += '</ul>Diep:<ul>';
+		html += '<li>Kerlix(tm) AMD(tm)                                                                                                                                                       plus eventueel hydrogel</li><ul>';
+	}
+	else if (    granulatie
+	         && !epitheliasatie
+			 &&  infectie
+			 &&  vochtig)
+	{
+		html += 'Oppervlakkig:</p><ul><li>Alginaat + Schuimverband</li>';
+		html += '<li>Niet verklevend gaas</li>';
+		html += '<li>Hydrofiber</li>';
+		html += '<li>Schuimverband</li></ul>';
+		html += 'Diep:<ul><li>Kerlix(tm) AMD(tm)</li>';
+		html += '<li>Hydrofiber + Schuimverband</li>';
+		html += '<li>Alginaat</li>';
+		html += '<li>Wondranden beschermen</li></ul>';
+	}
+	else if (    epitheliasatie
+			 && !infectie)
+	{
+		html += '<ul><li>Schuimverband</li>';
+		html += '<li>Niet verklevend gaas</li>';
+		html += '<li>Eventueel hydraterende huidcrème op droge nieuwe huid</li></p>';
+	}
+	else if (    epitheliasatie
+			 &&  infectie)
+	{
+		html += 'Neem contact op met de arts</p>';
+	}
+	else
+	{
+		html += 'Dit is een combinatie van factoren die we nog niet hebben voorzien!</p>';
+	}
+	tekst.innerHTML = html;
+	setVisibility ('flow', false);
+	setVisibility ('suggest', true);
+	setVisibility ('door', false);
+}
+
 function accept ()
 {
 	setVisibility ('selectFunction', true);
@@ -78,6 +188,24 @@ function overnieuw ()
 	setVisibility ('selectFunction', true);
 	setVisibility ('overnieuw', false);
 	setVisibility ('voetstand', false);
+	setVisibility ('flow', true);
+}
+
+function reset ()
+{
+	closeMenu ();
+	var page = document.getElementsByClassName ('page');
+	var vInput = document.getElementsByTagName ('input');
+
+	for (var i=0; i< page.length; i++)
+		page[i].style.display = 'none';
+	for (var i=0; i< vInput.length; i++)
+		vInput[i].checked = false;
+
+	setVisibility ('result', false);
+	setVisibility ('overnieuw', false);
+	setVisibility ('voetstand', false);
+	setVisibility ('flow', true);
 }
 
 function getContribution (subTotal, szElement, value)
@@ -98,20 +226,15 @@ function terug()
 	showPage (-1);
 }
 
-function behandel ()
-{
-	setVisibility ('selectFunction', false);
-	setVisibility ('disclaim', true);
-	setVisibility ('jaja', true);
-	document.getElementById ('jaja').innerHTML = 'Ik begrijp het';
-}
-
 function beoordeel ()
 {
+	closeMenu ();
 	setVisibility ('selectFunction', false);
 	setVisibility ('disclaim', false);
 	setVisibility ('verder', true);
 	setVisibility ('terug', true);
+	setVisibility ("beoordeel", true);
+	setVisibility ("behandel", false);
 	showPage (1);
 }
 
@@ -165,4 +288,37 @@ function clickVoet ()
 	if (document.getElementById ('c112').checked)
 		bShow = true;
 	setVisibility ('voetstand', bShow);
+}
+
+function onClickFase ()
+{
+	var fase3 = document.getElementById ('fase03');
+	var showVocht = true;
+	if (   fase3
+	    && fase3.checked)
+		showVocht = false;
+		
+	setVisibility ('wondvocht', showVocht);
+}
+
+function onClickMenu ()
+{
+//	setVisibility ('menu', true);
+	var vRight = document.getElementById ('menuWrap').style.right;
+	
+	if (   vRight == '-50%'
+	    || vRight == '')
+	{
+		document.getElementById ('menuWrap').style.right = '0%';
+		document.getElementById ('menuimg').src = 'img/cancel.png';
+	}
+	else
+		closeMenu ();
+}
+
+function closeMenu ()
+{
+	document.getElementById ('menuWrap').style.right = '-50%';
+	document.getElementById ('menuimg').src = 'img/menu.png';
+//	setVisibility ('menu', false);
 }
