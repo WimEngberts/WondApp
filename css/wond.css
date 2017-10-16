@@ -99,6 +99,7 @@ body
 	left:0px;
 	bottom:0px;
 	background:#efefef;
+	overflow:hidden;
 }
 
 #header
@@ -411,11 +412,11 @@ input[type="checkbox"]:checked + label span
 {
 	position:absolute;
 	display:block;
-	right:-50%;
+	left:100%;
+	width:auto;
 	height:100%;
-	top:0%;
+	top:0px;
 	background:#731373;
-	width:50%;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease; /* For Safari 3.1 to 6.0 */
 }
@@ -423,14 +424,18 @@ input[type="checkbox"]:checked + label span
 #menu
 {
 	position:absolute;
-	top:70px;
+	top:0px;
 	left:0px;
-	right:0px;
+/*	right:0px; */
 	bottom:0px;
 	display:block;
-	background:transparent;
-	padding:8px;
+	padding-left:8px;
+	padding-top:78px;
+	padding-bottom:8px;
+	padding-right:15px;
+	width:auto;
 	color:#ffffff;
+	background:#731373;
 }
 
 .menu
