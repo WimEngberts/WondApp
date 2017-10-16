@@ -207,6 +207,10 @@ function reset ()
 	setVisibility ('overnieuw', false);
 	setVisibility ('voetstand', false);
 	setVisibility ('flow', true);
+	if (document.getElementById ('behandel').style.display == 'block')
+		setVisibility ('door', true);
+	else
+		showPage (1);
 }
 
 function getContribution (subTotal, szElement, value)
