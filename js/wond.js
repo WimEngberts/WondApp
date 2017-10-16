@@ -312,12 +312,17 @@ function onClickFase ()
 function onClickMenu ()
 {
 //	setVisibility ('menu', true);
-	var vRight = document.getElementById ('menuWrap').style.right;
+	var wrap  = document.getElementById ('menuWrap');
+	var vLeft = wrap.style.left;
+	var vMenuWidth = document.getElementById ('menu').offsetWidth;
 	
-	if (   vRight == '-50%'
-	    || vRight == '')
+	wrap.style.width = vMenuWidth;
+	if (   vLeft == '100%'
+	    || vLeft == '')
 	{
-		document.getElementById ('menuWrap').style.right = '0%';
+		var vNew = document.getElementById ('wrapper').offsetWidth;
+		vNew -= vMenuWidth;
+		wrap.style.left = vNew + 'px';
 		document.getElementById ('menuimg').src = 'img/cancel.png';
 	}
 	else
@@ -326,7 +331,7 @@ function onClickMenu ()
 
 function closeMenu ()
 {
-	document.getElementById ('menuWrap').style.right = '-50%';
+	document.getElementById ('menuWrap').style.left = '100%';
 	document.getElementById ('menuimg').src = 'img/menu.png';
 //	setVisibility ('menu', false);
 }
