@@ -38,6 +38,7 @@ function behandel ()
 	setVisibility ('door', true);
 	setVisibility ('flow', true);
 	setVisibility ('middelen', false);
+	setVisibility ('decubitus', false);
 }
 
 function door ()
@@ -141,6 +142,13 @@ function accept ()
 {
 	setVisibility ('selectFunction', true);
 	setVisibility ('jaja', false);
+	var img = document.createElement ('img');
+	img.src = 'img/menu.png';
+	img.onclick = function() { onClickMenu(); };
+	img.id = 'menuimg';
+	document.getElementById ('header').appendChild (img);
+//	<img id="menuimg" src='img/menu.png' onclick="onClickMenu();" />
+//	setVisibility ('menuimg', true);
 }
 
 function verder()
@@ -241,6 +249,7 @@ function beoordeel ()
 	setVisibility ("beoordeel", true);
 	setVisibility ("behandel", false);
 	setVisibility ('middelen', false);
+	setVisibility ('decubitus', false);
 	showPage (1);
 }
 
@@ -248,6 +257,16 @@ function middelen ()
 {
 	closeMenu ();
 	setVisibility ('middelen', true);
+	setVisibility ('decubitus', false);
+	setVisibility ("jaja", false);
+}
+
+function decubitus ()
+{
+	closeMenu ();
+	setVisibility ('middelen', false);
+	setVisibility ('decubitus', true);
+	setVisibility ("jaja", false);
 }
 
 function showPage (number)
