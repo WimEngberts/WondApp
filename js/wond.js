@@ -26,21 +26,6 @@ function setVisibility(id, nVisible)
         e.style.display = 'block';
 }
 
-function behandel ()
-{
-	closeMenu ();
-	setVisibility ('selectFunction', false);
-	setVisibility ('disclaim', false);
-	setVisibility ('verder', false);
-	setVisibility ('terug', false);
-	setVisibility ("beoordeel", false);
-	setVisibility ("behandel", true);
-	setVisibility ('door', true);
-	setVisibility ('flow', true);
-	setVisibility ('middelen', false);
-	setVisibility ('decubitus', false);
-}
-
 function door ()
 {
 	var tekst = document.getElementById ('suggest');
@@ -250,7 +235,24 @@ function beoordeel ()
 	setVisibility ("behandel", false);
 	setVisibility ('middelen', false);
 	setVisibility ('decubitus', false);
+	setVisibility ('bottom', true);
 	showPage (1);
+}
+
+function behandel ()
+{
+	closeMenu ();
+	setVisibility ('selectFunction', false);
+	setVisibility ('disclaim', false);
+	setVisibility ('verder', false);
+	setVisibility ('terug', false);
+	setVisibility ("beoordeel", false);
+	setVisibility ("behandel", true);
+	setVisibility ('door', true);
+	setVisibility ('flow', true);
+	setVisibility ('middelen', false);
+	setVisibility ('decubitus', false);
+	setVisibility ('bottom', true);
 }
 
 function middelen ()
@@ -258,7 +260,14 @@ function middelen ()
 	closeMenu ();
 	setVisibility ('middelen', true);
 	setVisibility ('decubitus', false);
+	setVisibility ('door', false);
+	setVisibility ('verder', false);
+	setVisibility ('terug', false);
 	setVisibility ("jaja", false);
+	setVisibility ('beoordeel', false);
+	setVisibility ('behandel', false);
+	setVisibility ('selectFunction', false);
+	setVisibility ('bottom', false);
 }
 
 function decubitus ()
@@ -266,7 +275,14 @@ function decubitus ()
 	closeMenu ();
 	setVisibility ('middelen', false);
 	setVisibility ('decubitus', true);
+	setVisibility ('door', false);
+	setVisibility ('verder', false);
+	setVisibility ('terug', false);
 	setVisibility ("jaja", false);
+	setVisibility ('beoordeel', false);
+	setVisibility ('behandel', false);
+	setVisibility ('selectFunction', false);
+	setVisibility ('bottom', false);
 }
 
 function showPage (number)
