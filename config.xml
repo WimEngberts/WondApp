@@ -4,13 +4,33 @@
 	versionCode="10"
 	version="1.0.0">
   <name>Wond app</name>
-  <description>Bepalen benodigde handeling bij wondzorg</description>
+  <description>Bepalen gewenste handeling bij wondzorg</description>
   <author href="http://alexanderengberts.nl" email="info@alexanderengberts.nl">MedLex</author>
   <gap:platform name="ios" />
   <gap:platform name="android" />
   <gap:platform name="winphone" />
   <content src="index.html" width="72" height="72"/>
 
+    <preference name="permissions" value="none"/>
+    <preference name="orientation" value="default"/>
+    <preference name="target-device" value="universal"/>
+    <preference name="fullscreen" value="false"/>
+    <preference name="webviewbounce" value="true"/>
+    <preference name="prerendered-icon" value="true"/>
+    <preference name="stay-in-webview" value="false"/>
+    <preference name="ios-statusbarstyle" value="black-opaque"/>
+    <preference name="detect-data-types" value="true"/>
+    <preference name="exit-on-suspend" value="false"/>
+    <preference name="show-splash-screen-spinner" value="true"/>
+    <preference name="auto-hide-splash-screen" value="true"/>
+    <preference name="disable-cursor" value="false"/>
+    <preference name="android-minSdkVersion" value="7"/>
+    <preference name="android-installLocation" value="auto"/>
+    <preference name="StatusBarOverlaysWebView" value="false"/>
+    <preference name="StatusBarBackgroundColor" value="#000000"/>
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="iosPersistentFileLocation" value="Compatibility" />
     <!-- Define app icon and splashscreen for each platform. -->
     <plugin spec="https://github.com/shankari/cordova-plugin-email-composer" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-statusbar" source="git" />
