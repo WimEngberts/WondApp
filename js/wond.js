@@ -178,10 +178,15 @@ function overnieuw ()
 	for (var i=0; i< vInput.length; i++)
 		vInput[i].checked = false;
 
+	closeMenu ();
 	setVisibility ('result', false);
 	setVisibility ('selectFunction', true);
 	setVisibility ('overnieuw', false);
 	setVisibility ('voetstand', false);
+	setVisibility ('behandel', false);
+	setVisibility ('beoordeel', false);
+	setVisibility ('middelen', false);
+	setVisibility ('decubitus', false);
 	setVisibility ('flow', true);
 }
 
