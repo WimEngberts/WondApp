@@ -287,7 +287,7 @@ function decubitus ()
 
 function showPage (number)
 {
-	var page = document.getElementsByClassName ('page');
+	var page = document.getElementsByClassName ('oor');		// ik vond "beoordeling" een te lang woord :)
 	var n;
 	var r = true;
 	
