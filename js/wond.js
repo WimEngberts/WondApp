@@ -74,16 +74,13 @@ function door ()
 			html += '<li>Novuxol(r) + siliconengaas + absorberend verband - Eusol + absorberend verband</li>';
 			html += '<li>Wondranden beschermen</li></ul>';
 		}
-		else if (    infectie
-				 && !vochtig)
+		else
 		{
 			html += 'Necrose/beslag verwijderen:</p><ul><li>Chirurgisch debridement</li>'
 			html += '<li>Alginaat</li>';
 			html += '<li>Novuxol(r) + siliconengaas + absorberend verband - Eusol + absorberend verband</li>';
 			html += '<li>Wondranden beschermen</li></ul>';
 		}
-		else
-			html += 'Dit is een combinatie van factoren die we nog niet hebben voorzien!</p>';
 	}
 	else if (granulatie)
 	{
@@ -108,7 +105,14 @@ function door ()
 			html += '<li>Wondranden beschermen</li></ul>';
 		}
 		else
-			html += 'Dit is een combinatie van factoren die we nog niet hebben voorzien!</p>';
+		{
+			html += 'Oppervlakkig:</p><ul><li>Alginaat + Schuimverband</li>';
+			html += '<li>Niet verklevend gaas</li>';
+			html += '<li>Hydrofiber</li>';
+			html += '<li>Schuimverband</li></ul>';
+			html += 'Diep:<ul><li>Kerlix(tm) AMD(tm)</li>';
+			html += '<li>Hydrofiber + Schuimverband</li></ul>';
+		}
 	}
 	else if (epitheliasatie)
 	{
