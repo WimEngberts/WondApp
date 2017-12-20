@@ -28,12 +28,13 @@ function setVisibility(id, nVisible)
 
 function door ()
 {
-	var tekst = document.getElementById ('suggest');
-	var debridement    = document.getElementById ('fase01').checked;
-	var granulatie     = document.getElementById ('fase02').checked;
-	var epitheliasatie = document.getElementById ('fase03').checked;
-	var infectie       = document.getElementById ('infect01').checked;
-	var vochtig        = document.getElementById ('vocht02').checked;
+	var tekst			= document.getElementById ('suggest');
+	var debridement		= document.getElementById ('fase01').checked;
+	var granulatie		= document.getElementById ('fase02').checked;
+	var epitheliasatie	= document.getElementById ('fase03').checked;
+	var infectie		= document.getElementById ('infect01').checked;
+	var vochtig			= document.getElementById ('vocht02').checked;
+	
 	var html = '<h2>Ingevoerde gegevens</h2><ul><li>';
 	if (!debridement)
 		html += 'Geen d';
@@ -156,7 +157,10 @@ function verder()
 		nPoints = getContribution (nPoints, 'c102', 1);
 //		document.getElementById ('totalScore').innerHTML = nPoints;
 		if (nPoints < 3)
-			document.getElementById ('voorstel').innerHTML = 'Op grond van de ingevulde gegevens is geen noodzaak tot overleg of insturen';
+		{
+			document.getElementById ('voorstel').innerHTML =   'Op grond van de ingevulde gegevens is geen noodzaak tot overleg of insturen<br /><br />'
+															 + 'Voor behandeling kunt u eventueel de <a href="#" onclick="behandel ();">behandel sectie</a> inzien';
+		}
 		else if (nPoints < 6)
 			document.getElementById ('voorstel').innerHTML = 'Op grond van de ingevulde gegevens adviseren wij overleg met het Alrijne wondcentrum';
 		else
