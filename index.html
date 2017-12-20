@@ -244,7 +244,7 @@
 						<table>
 							<tr>
 								<td>
-									<input type="checkbox" id="fase01" name="cc" onclick="onClickFase();" /><label for="fase01"><span></span></label>	
+									<input type="radio" id="fase01" name="cc" onclick="onClickFase();" /><label for="fase01"><span></span></label>	
 								</td><td>
 									<label for="fase01"><span></span>Debridement<br />
 									<i><span style="font-size:small">Kenmerken: necrose en/of beslag. Doel: verwijderen/reinigen</i></span></label>
@@ -252,7 +252,7 @@
 							</tr>
 							<tr>
 								<td>
-									<input type="checkbox" id="fase02" name="cc" onclick="onClickFase();" /><label for="fase02"><span></span></label>
+									<input type="radio" id="fase02" name="cc" onclick="onClickFase();" /><label for="fase02"><span></span></label>
 								</td><td>
 									<label for="fase02"><span></span>Granulatie<br />
 									<i><span style="font-size:small">Kenmerken: roze/rood weefsel. Doel: beschermen/stimuleren</i></span></label>
@@ -260,7 +260,7 @@
 							</tr>
 							<tr>
 								<td>
-									<input type="checkbox" id="fase03" name="cc" onclick="onClickFase();" /><label for="fase03"><span></span></label>
+									<input type="radio" id="fase03" name="cc" onclick="onClickFase();" /><label for="fase03"><span></span></label>
 								</td><td>
 									<label for="fase03"><span></span>Epithelialisatie<br />
 									<i><span style="font-size:small">Kenmerken: huidvorming. Doel: beschermen/stimuleren</i></span></label>
@@ -489,6 +489,7 @@
 		</div>
 		<div id="menuWrap">
 			<div id="menu" class="standard">
+				<div class="menu menuHoofd" onclick="overnieuw();">Hoofdmenu</div><br />
 				<div class="menu menuReset" onclick="reset();">Opnieuw</div><br />
 				<div class="menu menuBeoordeel" onclick="beoordeel();">Beoordeel</div><br />
 				<div class="menu menuBehandel" onclick="behandel();">Behandel</div><br />
