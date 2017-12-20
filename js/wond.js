@@ -61,63 +61,69 @@ function door ()
 	else
 		html += 'Droge';
 	html += ' wond</li></ul><h2>Behandeling</h2><p>';
-	if (    debridement
-	    && !granulatie
-		&& !epitheliasatie
-	    && !infectie
-		&& !vochtig)
-		html += 'De wond droog houden, eventueel dun zinkolie opbrengen</p>';
-	else if (    debridement
-			 && !granulatie
-			 && !epitheliasatie
-	         &&  infectie
-			 &&  vochtig)
+	if (debridement)
 	{
-		html += 'Necrose/beslag verwijderen:</p><ul><li>Chirurgisch debridement</li>'
-		html += '<li>Alginaat</li>';
-		html += '<li>Novuxol(r) + siliconengaas + absorberend verband - Eusol + absorberend verband</li>';
-		html += '<li>Wondranden beschermen</li></ul>';
+		if (   !infectie
+		    && !vochtig)
+			html += 'De wond droog houden, eventueel dun zinkolie opbrengen</p>';
+		else if (   infectie
+				 && vochtig)
+		{
+			html += 'Necrose/beslag verwijderen:</p><ul><li>Chirurgisch debridement</li>'
+			html += '<li>Alginaat</li>';
+			html += '<li>Novuxol(r) + siliconengaas + absorberend verband - Eusol + absorberend verband</li>';
+			html += '<li>Wondranden beschermen</li></ul>';
+		}
+		else if (    infectie
+				 && !vochtig)
+		{
+			html += 'Necrose/beslag verwijderen:</p><ul><li>Chirurgisch debridement</li>'
+			html += '<li>Alginaat</li>';
+			html += '<li>Novuxol(r) + siliconengaas + absorberend verband - Eusol + absorberend verband</li>';
+			html += '<li>Wondranden beschermen</li></ul>';
+		}
+		else
+			html += 'Dit is een combinatie van factoren die we nog niet hebben voorzien!</p>';
 	}
-	else if (    granulatie
-	         && !epitheliasatie
-			 && !infectie
-			 && !vochtig)
+	else if (granulatie)
 	{
-		html += 'Oppervlakkig:</p><ul><li>Schuimverband</li>'
-		html += '<li>Eventueel hydrogel</li>';
-		html += '</ul>Diep:<ul>';
-		html += '<li>Kerlix(tm) AMD(tm)                                                                                                                                                       plus eventueel hydrogel</li><ul>';
+		if (   !infectie
+			&& !vochtig)
+		{
+			html += 'Oppervlakkig:</p><ul><li>Schuimverband</li>'
+			html += '<li>Eventueel hydrogel</li>';
+			html += '</ul>Diep:<ul>';
+			html += '<li>Kerlix(tm) AMD(tm)plus eventueel hydrogel</li><ul>';
+		}
+		else if (   infectie
+				 && vochtig)
+		{
+			html += 'Oppervlakkig:</p><ul><li>Alginaat + Schuimverband</li>';
+			html += '<li>Niet verklevend gaas</li>';
+			html += '<li>Hydrofiber</li>';
+			html += '<li>Schuimverband</li></ul>';
+			html += 'Diep:<ul><li>Kerlix(tm) AMD(tm)</li>';
+			html += '<li>Hydrofiber + Schuimverband</li>';
+			html += '<li>Alginaat</li>';
+			html += '<li>Wondranden beschermen</li></ul>';
+		}
+		else
+			html += 'Dit is een combinatie van factoren die we nog niet hebben voorzien!</p>';
 	}
-	else if (    granulatie
-	         && !epitheliasatie
-			 &&  infectie
-			 &&  vochtig)
+	else if (epitheliasatie)
 	{
-		html += 'Oppervlakkig:</p><ul><li>Alginaat + Schuimverband</li>';
-		html += '<li>Niet verklevend gaas</li>';
-		html += '<li>Hydrofiber</li>';
-		html += '<li>Schuimverband</li></ul>';
-		html += 'Diep:<ul><li>Kerlix(tm) AMD(tm)</li>';
-		html += '<li>Hydrofiber + Schuimverband</li>';
-		html += '<li>Alginaat</li>';
-		html += '<li>Wondranden beschermen</li></ul>';
-	}
-	else if (    epitheliasatie
-			 && !infectie)
-	{
-		html += '<ul><li>Schuimverband</li>';
-		html += '<li>Niet verklevend gaas</li>';
-		html += '<li>Eventueel hydraterende huidcrème op droge nieuwe huid</li></p>';
-	}
-	else if (    epitheliasatie
-			 &&  infectie)
-	{
-		html += 'Neem contact op met de arts</p>';
+		if (infectie)
+			html += 'Neem contact op met de arts</p>';
+		else
+		{
+			html += '<ul><li>Schuimverband</li>';
+			html += '<li>Niet verklevend gaas</li>';
+			html += '<li>Eventueel hydraterende huidcrème op droge nieuwe huid</li></p>';
+		}
 	}
 	else
-	{
 		html += 'Dit is een combinatie van factoren die we nog niet hebben voorzien!</p>';
-	}
+
 	tekst.innerHTML = html;
 	setVisibility ('flow', false);
 	setVisibility ('suggest', true);
@@ -197,7 +203,7 @@ function overnieuw ()
 function reset ()
 {
 	closeMenu ();
-	var page = document.getElementsByClassName ('page');
+	var page   = document.getElementsByClassName ('page');
 	var vInput = document.getElementsByTagName ('input');
 
 	for (var i=0; i< page.length; i++)
