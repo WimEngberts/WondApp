@@ -129,9 +129,10 @@ function door ()
 		html += 'Dit is een combinatie van factoren die we nog niet hebben voorzien!</p>';
 
 	tekst.innerHTML = html;
-	setVisibility ('flow', false);
-	setVisibility ('suggest', true);
-	setVisibility ('door', false);
+	setVisibility ('flow'     , false);
+	setVisibility ('suggest'  , true);
+	setVisibility ('overnieuw', true);
+	setVisibility ('door'     , false);
 }
 
 function accept ()
@@ -169,7 +170,7 @@ function verder()
 		if (nPoints < 3)
 		{
 			document.getElementById ('voorstel').innerHTML =   'Op grond van de ingevulde gegevens is geen noodzaak tot overleg of insturen<br /><br />'
-															 + 'Voor behandeling kunt u eventueel de <a href="#" onclick="behandel ();">behandel sectie</a> inzien';
+															 + 'Voor behandeling kunt u eventueel de <a href="#" onclick="behandel ();">behandel sectie</a> raadplegen';
 		}
 		else if (nPoints < 6)
 			document.getElementById ('voorstel').innerHTML = 'Op grond van de ingevulde gegevens adviseren wij overleg met het Alrijne wondcentrum';
@@ -247,14 +248,15 @@ function beoordeel ()
 {
 	closeMenu ();
 	setVisibility ('selectFunction', false);
-	setVisibility ('disclaim', false);
-	setVisibility ('verder', true);
-	setVisibility ('terug', true);
-	setVisibility ("beoordeel", true);
-	setVisibility ("behandel", false);
-	setVisibility ('middelen', false);
-	setVisibility ('decubitus', false);
-	setVisibility ('bottom', true);
+	setVisibility ('disclaim'      , false);
+	setVisibility ('verder'        , true);
+	setVisibility ('terug'         , true);
+	setVisibility ("beoordeel"     , true);
+	setVisibility ("behandel"      , false);
+	setVisibility ('middelen'      , false);
+	setVisibility ('decubitus'     , false);
+	setVisibility ('overnieuw'     , false);
+	setVisibility ('bottom'        , true);
 	showPage (1);
 }
 
@@ -262,16 +264,17 @@ function behandel ()
 {
 	closeMenu ();
 	setVisibility ('selectFunction', false);
-	setVisibility ('disclaim', false);
-	setVisibility ('verder', false);
-	setVisibility ('terug', false);
-	setVisibility ("beoordeel", false);
-	setVisibility ("behandel", true);
-	setVisibility ('door', true);
-	setVisibility ('flow', true);
-	setVisibility ('middelen', false);
-	setVisibility ('decubitus', false);
-	setVisibility ('bottom', true);
+	setVisibility ('disclaim'      , false);
+	setVisibility ('verder'        , false);
+	setVisibility ('terug'         , false);
+	setVisibility ("beoordeel"     , false);
+	setVisibility ('middelen'      , false);
+	setVisibility ('decubitus'     , false);
+	setVisibility ('overnieuw'     , false);
+	setVisibility ("behandel"      , true);
+	setVisibility ('door'          , true);
+	setVisibility ('flow'          , true);
+	setVisibility ('bottom'        , true);
 }
 
 function middelen ()
