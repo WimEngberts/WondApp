@@ -1,9 +1,9 @@
 <widget xmlns="http://www.w3.org/ns/widgets"
 	xmlns:gap="http://phonegap.com/ns/1.0"
 	id="nl.alexanderengberts.wondapp"
-	versionCode="10"
-	version="1.0.0">
-  <name>Wond app</name>
+	versionCode="101"
+	version="1.0.1">
+  <name>WondApp</name>
   <description>Bepalen gewenste handeling bij wondzorg</description>
   <author href="http://alexanderengberts.nl" email="info@alexanderengberts.nl">MedLex</author>
   <gap:platform name="ios" />
@@ -11,29 +11,30 @@
   <gap:platform name="winphone" />
   <content src="index.html" width="72" height="72"/>
 
-    <preference name="permissions" value="none"/>
-    <preference name="orientation" value="default"/>
-    <preference name="target-device" value="universal"/>
-    <preference name="fullscreen" value="false"/>
-    <preference name="webviewbounce" value="true"/>
-    <preference name="prerendered-icon" value="true"/>
-    <preference name="stay-in-webview" value="false"/>
-    <preference name="ios-statusbarstyle" value="black-opaque"/>
-    <preference name="detect-data-types" value="true"/>
-    <preference name="exit-on-suspend" value="false"/>
-    <preference name="show-splash-screen-spinner" value="true"/>
-    <preference name="auto-hide-splash-screen" value="true"/>
-    <preference name="disable-cursor" value="false"/>
-    <preference name="android-minSdkVersion" value="7"/>
-    <preference name="android-installLocation" value="auto"/>
-    <preference name="StatusBarOverlaysWebView" value="false"/>
-    <preference name="StatusBarBackgroundColor" value="#000000"/>
-    <preference name="StatusBarStyle" value="lightcontent" />
-    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-    <preference name="iosPersistentFileLocation" value="Compatibility" />
-    <!-- Define app icon and splashscreen for each platform. -->
-    <plugin spec="https://github.com/shankari/cordova-plugin-email-composer" source="git" />
+	<preference name="permissions" value="none"/>
+	<preference name="orientation" value="default"/>
+	<preference name="target-device" value="universal"/>
+	<preference name="fullscreen" value="false"/>
+	<preference name="webviewbounce" value="true"/>
+	<preference name="prerendered-icon" value="true"/>
+	<preference name="stay-in-webview" value="false"/>
+	<preference name="ios-statusbarstyle" value="black-opaque"/>
+	<preference name="detect-data-types" value="true"/>
+	<preference name="exit-on-suspend" value="false"/>
+	<preference name="show-splash-screen-spinner" value="true"/>
+	<preference name="auto-hide-splash-screen" value="true"/>
+	<preference name="disable-cursor" value="false"/>
+	<preference name="android-minSdkVersion" value="7"/>
+	<preference name="android-installLocation" value="auto"/>
+	<preference name="StatusBarOverlaysWebView" value="false"/>
+	<preference name="StatusBarBackgroundColor" value="#000000"/>
+	<preference name="StatusBarStyle" value="lightcontent" />
+	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
+	<preference name="iosPersistentFileLocation" value="Compatibility" />
+	<!-- Plugins to be used. -->
+	<plugin spec="https://github.com/shankari/cordova-plugin-email-composer" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-statusbar" source="git" />
+	<!-- Define app icon and splashscreen for each platform. -->
 	<icon   src="res/icon/android/drawable-ldpi-icon.png"     platform="android" density="ldpi"    qualifier="ldpi"   />
 	<icon   src="res/icon/android/drawable-mdpi-icon.png"     platform="android" density="mdpi"    qualifier="mdpi"   />
 	<icon   src="res/icon/android/drawable-hdpi-icon.png"     platform="android" density="hdpi"    qualifier="hdpi"   />
@@ -101,18 +102,5 @@
     </platform>
 
     <access origin="*" />
-
-    <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
-    <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
-
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <platform name="android">
-        <allow-intent href="market:*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
 
 </widget>
