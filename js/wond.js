@@ -8,9 +8,9 @@ function initWond()
 {
 	if (getOsVersion () > 7)
 	{
-		document.getElementById ('payload').style.top = '100px';
-		document.getElementById ('menuWrap').style.top = '30px';
-		document.getElementById ('header').style.top = '30px';
+		document.getElementById ('payload').style.top = '90px';
+		document.getElementById ('menuWrap').style.top = '20px';
+		document.getElementById ('header').style.top = '20px';
 	}
 }
 
