@@ -2,6 +2,19 @@
 // Copyright (c) 2015-2016, MedLex BV
 
 //---------------------------------------------------------------------------
+// Initialiseer de hele handel
+//
+function initWond()
+{
+	if (getOsVersion () > 7)
+	{
+		document.getElementById ('payload').style.top = '100px';
+		document.getElementById ('menuWrap').style.top = '30px';
+		document.getElementById ('header').style.top = '30px';
+	}
+}
+
+//---------------------------------------------------------------------------
 // Maak een div zichtbaar of onzichtbaar
 //
 function setVisibility(id, nVisible)
@@ -133,6 +146,7 @@ function door ()
 	setVisibility ('suggest'  , true);
 	setVisibility ('overnieuw', true);
 	setVisibility ('door'     , false);
+	setVisibility ('verder'   , false);
 }
 
 function accept ()
@@ -179,6 +193,7 @@ function verder()
 		setVisibility ('result', true);
 		setVisibility ('overnieuw', true);
 		setVisibility ('verder', false);
+		setVisibility ('door', false);
 		setVisibility ('terug', false);
 	}
 }
@@ -194,15 +209,17 @@ function overnieuw ()
 		vInput[i].checked = false;
 
 	closeMenu ();
-	setVisibility ('result', false);
+	setVisibility ('result'        , false);
 	setVisibility ('selectFunction', true);
-	setVisibility ('overnieuw', false);
-	setVisibility ('voetstand', false);
-	setVisibility ('behandel', false);
-	setVisibility ('beoordeel', false);
-	setVisibility ('middelen', false);
-	setVisibility ('decubitus', false);
-	setVisibility ('flow', true);
+	setVisibility ('overnieuw'     , false);
+	setVisibility ('voetstand'     , false);
+	setVisibility ('behandel'      , false);
+	setVisibility ('beoordeel'     , false);
+	setVisibility ('middelen'      , false);
+	setVisibility ('decubitus'     , false);
+	setVisibility ('door'          , false);
+	setVisibility ('verder'        , false);
+	setVisibility ('flow'          , true);
 }
 
 function reset ()
@@ -216,14 +233,19 @@ function reset ()
 	for (var i=0; i< vInput.length; i++)
 		vInput[i].checked = false;
 
-	setVisibility ('result', false);
+	setVisibility ('result'   , false);
 	setVisibility ('overnieuw', false);
 	setVisibility ('voetstand', false);
-	setVisibility ('flow', true);
+	setVisibility ('door'     , false);
+	setVisibility ('verder'   , false);
+	setVisibility ('flow'     , true);
 	if (document.getElementById ('behandel').style.display == 'block')
 		setVisibility ('door', true);
 	else
+	{
+		setVisibility ('verder', true);
 		showPage (1);
+	}
 }
 
 function getContribution (subTotal, szElement, value)
@@ -257,6 +279,7 @@ function beoordeel ()
 	setVisibility ('decubitus'     , false);
 	setVisibility ('overnieuw'     , false);
 	setVisibility ('bottom'        , true);
+	setVisibility ('door'          , false);
 	showPage (1);
 }
 
@@ -280,31 +303,31 @@ function behandel ()
 function middelen ()
 {
 	closeMenu ();
-	setVisibility ('middelen', true);
-	setVisibility ('decubitus', false);
-	setVisibility ('door', false);
-	setVisibility ('verder', false);
-	setVisibility ('terug', false);
-	setVisibility ("jaja", false);
-	setVisibility ('beoordeel', false);
-	setVisibility ('behandel', false);
-	setVisibility ('selectFunction', false);
-	setVisibility ('bottom', false);
+	setVisibility ('middelen'       , true);
+	setVisibility ('decubitus'      , false);
+	setVisibility ('door'           , false);
+	setVisibility ('verder'         , false);
+	setVisibility ('terug'          , false);
+	setVisibility ("jaja"           , false);
+	setVisibility ('beoordeel'      , false);
+	setVisibility ('behandel'       , false);
+	setVisibility ('selectFunction' , false);
+	setVisibility ('bottom'         , false);
 }
 
 function decubitus ()
 {
 	closeMenu ();
-	setVisibility ('middelen', false);
-	setVisibility ('decubitus', true);
-	setVisibility ('door', false);
-	setVisibility ('verder', false);
-	setVisibility ('terug', false);
-	setVisibility ("jaja", false);
-	setVisibility ('beoordeel', false);
-	setVisibility ('behandel', false);
+	setVisibility ('middelen'      , false);
+	setVisibility ('decubitus'     , true);
+	setVisibility ('door'          , false);
+	setVisibility ('verder'        , false);
+	setVisibility ('terug'         , false);
+	setVisibility ("jaja"          , false);
+	setVisibility ('beoordeel'     , false);
+	setVisibility ('behandel'      , false);
 	setVisibility ('selectFunction', false);
-	setVisibility ('bottom', false);
+	setVisibility ('bottom'        , false);
 }
 
 function showPage (number)
@@ -395,4 +418,19 @@ function closeMenu ()
 	document.getElementById ('menuWrap').style.left = '100%';
 	document.getElementById ('menuimg').src = 'img/menu.png';
 //	setVisibility ('menu', false);
+}
+
+//-----------------------------------------------------------------------------------
+// Welke versie iOS hebben we?
+//
+function getOsVersion()
+{
+    var agent = window.navigator.userAgent,
+    start = agent.indexOf( 'OS ' );
+    var r = 0;
+    
+    if ( /iphone|ipod|ipad|iPhone|iPod|iPad/.test( agent ) && start > -1 )
+        r = window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) );
+	
+    return r;
 }
