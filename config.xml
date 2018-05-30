@@ -41,18 +41,18 @@
 	<icon   src="res/icon/android/drawable-xhdpi-icon.png"    platform="android" density="xhdpi"   qualifier="xhdpi"  />
 	<icon   src="res/icon/android/drawable-xxhdpi-icon.png"   platform="android" density="xxhdpi"  qualifier="xxhdpi" />
 	<icon   src="res/icon/android/drawable-xxxhdpi-icon.png"  platform="android" density="xxxhdpi" qualifier="xxxhdpi" />
-	<gap:splash src="res/screen/android/LDPIPortrait.png"         gap:platform="android" gap:qualifier="port-ldpi"/>
-	<gap:splash src="res/screen/android/LDPILandscape.png"        gap:platform="android" gap:qualifier="land-ldpi"/>
-	<gap:splash src="res/screen/android/MDPIPortrait.png"         gap:platform="android" gap:qualifier="port-mdpi"/>
-	<gap:splash src="res/screen/android/MDPILandscape.png"        gap:platform="android" gap:qualifier="land-mdpi"/>
-	<gap:splash src="res/screen/android/HDPIPortrait.png"         gap:platform="android" gap:qualifier="port-hdpi"/>
-	<gap:splash src="res/screen/android/HDPILandscape.png"        gap:platform="android" gap:qualifier="land-hdpi"/>
-	<gap:splash src="res/screen/android/XHDPIPortrait.png"        gap:platform="android" gap:qualifier="port-xhdpi"/>
-	<gap:splash src="res/screen/android/XHDPILandscape.png"       gap:platform="android" gap:qualifier="land-xhdpi"/>
-	<gap:splash src="res/screen/android/XXHDPIPortrait.png"       gap:platform="android" gap:qualifier="port-xxhdpi"/>
-	<gap:splash src="res/screen/android/XXHDPILandscape.png"      gap:platform="android" gap:qualifier="land-xxhdpi"/>
-	<gap:splash src="res/screen/android/XXXHDPIPortrait.png"      gap:platform="android" gap:qualifier="port-xxxhdpi"/>
-	<gap:splash src="res/screen/android/XXXHDPILandscape.png"     gap:platform="android" gap:qualifier="land-xxxhdpi"/>
+	<splash src="res/screen/android/LDPIPortrait.png"         gap:platform="android" gap:qualifier="port-ldpi"/>
+	<splash src="res/screen/android/LDPILandscape.png"        gap:platform="android" gap:qualifier="land-ldpi"/>
+	<splash src="res/screen/android/MDPIPortrait.png"         gap:platform="android" gap:qualifier="port-mdpi"/>
+	<splash src="res/screen/android/MDPILandscape.png"        gap:platform="android" gap:qualifier="land-mdpi"/>
+	<splash src="res/screen/android/HDPIPortrait.png"         gap:platform="android" gap:qualifier="port-hdpi"/>
+	<splash src="res/screen/android/HDPILandscape.png"        gap:platform="android" gap:qualifier="land-hdpi"/>
+	<splash src="res/screen/android/XHDPIPortrait.png"        gap:platform="android" gap:qualifier="port-xhdpi"/>
+	<splash src="res/screen/android/XHDPILandscape.png"       gap:platform="android" gap:qualifier="land-xhdpi"/>
+	<splash src="res/screen/android/XXHDPIPortrait.png"       gap:platform="android" gap:qualifier="port-xxhdpi"/>
+	<splash src="res/screen/android/XXHDPILandscape.png"      gap:platform="android" gap:qualifier="land-xxhdpi"/>
+	<splash src="res/screen/android/XXXHDPIPortrait.png"      gap:platform="android" gap:qualifier="port-xxxhdpi"/>
+	<splash src="res/screen/android/XXXHDPILandscape.png"     gap:platform="android" gap:qualifier="land-xxxhdpi"/>
     <platform name="android">
         <preference name="SplashScreenDelay" value="10000" />
         <preference name="SplashMaintainAspectRatio" value="false" />
@@ -81,6 +81,8 @@
 	<splash src="res/screen/ios/TabletNonRetinaLandscape.png" platform="ios" width="1024" height="768"/>
 	<splash src="res/screen/ios/TabletRetinaPortrait.png"     platform="ios" width="1536" height="2048"/>
 	<splash src="res/screen/ios/TabletRetinaLandscape.png"    platform="ios" width="2048" height="1536"/>
+	<splash src="res/screen/ios/iPadProPortrait.png"          platform="ios" width="2048" height="2732"/>
+	<splash src="res/screen/ios/iPadProLandscape.png"         platform="ios" width="2732" height="2048"/>
 	<!-- iPhone -->
 	<splash src="res/screen/ios/iPhoneRetinaPortrait.png"     platform="ios" width="640" height="960" />
 	<splash src="res/screen/ios/iPhoneRetinaLandscape.png"    platform="ios" width="960" height="640" />
@@ -89,12 +91,19 @@
 	<!-- iPhone 5 -->
 	<splash src="res/screen/ios/iPhone5RetinaPortrait.png"    platform="ios" width="640" height="1136" />
 	<splash src="res/screen/ios/iPhone5RetinaLandscape.png"   platform="ios" width="1136" height="640" />
-	<!-- iPhone 6 -->
+	<!-- iPhone 6 en 8 -->
 	<splash src="res/screen/ios/iPhone6Portrait.png"          platform="ios" width="750" height="1334" />
 	<splash src="res/screen/ios/iPhone6Landscape.png"         platform="ios" width="1334" height="750" />
 	<!-- iPhone 6Plus -->
 	<splash src="res/screen/ios/iPhone6PlusPortrait.png"      platform="ios" width="1242" height="2208" />
 	<splash src="res/screen/ios/iPhone6PlusLandscape.png"     platform="ios" width="2208" height="1242" />
+	<!-- iPhone 8Plus -->
+	<splash src="res/screen/ios/iPhone8PlusPortrait.png"      platform="ios" width="1080" height="1920" />
+	<splash src="res/screen/ios/iPhone8PlusLandscape.png"     platform="ios" width="1920" height="1080" />
+	<!-- iPhone 10 -->
+	<splash src="res/screen/ios/iPhone10Portrait.png"         platform="ios" width="1125" height="2436" />
+	<splash src="res/screen/ios/iPhone10Landscape.png"        platform="ios" width="2436" height="1136" />
+
     <platform name="ios">
         <preference name="SplashScreenDelay" value="5000" />
         <preference name="SplashMaintainAspectRatio" value="false" />
