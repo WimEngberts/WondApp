@@ -3,13 +3,14 @@
 	id="nl.alexanderengberts.wondapp"
 	versionCode="104"
 	version="1.0.4">
-  <name>WondApp</name>
-  <description>Bepalen gewenste handeling bij wondzorg</description>
-  <author href="http://alexanderengberts.nl" email="info@alexanderengberts.nl">MedLex</author>
-  <gap:platform name="ios" />
-  <gap:platform name="android" />
-  <gap:platform name="winphone" />
-  <content src="index.html" width="72" height="72"/>
+	<name>WondApp</name>
+	<description>Bepalen gewenste handeling bij wondzorg</description>
+	<author href="http://alexanderengberts.nl" email="info@alexanderengberts.nl">MedLex</author>
+	<gap:platform name="ios" />
+	<gap:platform name="android" />
+	<gap:platform name="winphone" />
+	<content src="index.html" width="72" height="72"/>
+	<preference name="phonegap-version" value="cli-7.1.0" />
 
 	<preference name="permissions" value="none"/>
 	<preference name="orientation" value="default"/>
