@@ -15,8 +15,7 @@
       <meta name="format-detection" content="telephone=no" />
       <meta name="msapplication-tap-highlight" content="no" />
       <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-<!--      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
-      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, content="width=device-width" />
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, viewport-fit=cover" />
       <link rel="stylesheet" type="text/css" href="css/wond.css" />
 <!--      <link rel="stylesheet" type="text/css" href="css/checkbox.css" /> -->
       
@@ -490,7 +489,7 @@
 		<div id="menuWrap">
 			<div id="menu" class="standard">
 				<div class="menu menuHoofd" onclick="overnieuw();">Hoofdmenu</div><br />
-				<div class="menu menuReset" onclick="reset();">Opnieuw</div><br />
+<!--			<div class="menu menuReset" onclick="reset();">Opnieuw</div><br /> -->
 				<div class="menu menuBeoordeel" onclick="beoordeel();">Beoordeel</div><br />
 				<div class="menu menuBehandel" onclick="behandel();">Behandel</div><br />
 				<div class="menu menuMiddelen" onclick="middelen();">Wondverbandmiddelen</div><br />
@@ -499,12 +498,12 @@
 			</div>
 		</div>
 		<div id="header" class="large"></div>
-		<div id="bottom"></div>
-		<div id="jaja" class="button" onclick="accept();">Ik begrijp het</div>
-		<div id="door" class="button" onclick="door();">Verder</div>
-		<div id="overnieuw" class="button" onclick="overnieuw();">OK</div>
-		<div id="terug" class="button2" onclick="terug()">Terug</div>
-		<div id="verder" class="button2" onclick="verder()">Verder</div>
+		<div id="bottom" class="footer"></div>
+		<div id="jaja" class="button footer" onclick="accept();">Ik begrijp het</div>
+		<div id="door" class="button footer" onclick="door();">Verder</div>
+		<div id="overnieuw" class="button footer" onclick="overnieuw();">OK</div>
+		<div id="terug" class="button2 footer" onclick="terug()">Terug</div>
+		<div id="verder" class="button2 footer" onclick="verder()">Verder</div>
 	</div>
 	<script type="text/javascript">initWond();</script>
 </body>
