@@ -109,7 +109,7 @@
 		<splash src="res/screen/ios/iPhone10Landscape.png"        platform="ios" width="2436" height="1136" /> -->
 
 		<!-- One general splash screen 2732x2732 -->
-		<splash src="res/screen/ios/Default@2x~universal~anyany.png" platform="ios" />
+		<splash src="res/screen/ios/Default@2x~universal~anyany.png" />
 
 		<preference name="SplashScreenDelay" value="3000" />
 		<preference name="SplashMaintainAspectRatio" value="false" />
