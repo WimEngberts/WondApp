@@ -83,20 +83,24 @@ function door ()
 				 && vochtig)
 		{
 			html += 'Necrose/beslag verwijderen:</p><ul><li>Chirurgisch debridement</li>'
-			html += '<li>Alginaat</li>';
+//			html += '<li>Alginaat</li>';
 			html += '<li>Novuxol(r) + siliconengaas + absorberend verband - Eusol + absorberend verband</li>';
 			html += '<li>Wondranden beschermen</li></ul>';
 		}
 		else
 		{
 			html += 'Necrose/beslag verwijderen:</p><ul><li>Chirurgisch debridement</li>'
-			html += '<li>Alginaat</li>';
+//			html += '<li>Alginaat</li>';
 			html += '<li>Novuxol(r) + siliconengaas + absorberend verband - Eusol + absorberend verband</li>';
 			html += '<li>Wondranden beschermen</li></ul>';
 		}
 	}
 	else if (granulatie)
 	{
+		if (infectie)
+		{
+			html += '<b>Ernst infectie door arts laten beoordelen!</b></p><p>'
+		}
 		if (   !infectie
 			&& !vochtig)
 		{
@@ -131,11 +135,17 @@ function door ()
 	{
 		if (infectie)
 			html += 'Neem contact op met de arts</p>';
-		else
+		else if (!vochtig)
 		{
 			html += '<ul><li>Schuimverband</li>';
 			html += '<li>Niet verklevend gaas</li>';
 			html += '<li>Eventueel hydraterende huidcrème op droge nieuwe huid</li></p>';
+		}
+		else
+		{
+			html += '<ul><li>Niet-klevend gaas + absorberend verband</li>';
+			html += '<li>Hydrofiber</li>';
+			html += '<li>Alginaat</li></p>';
 		}
 	}
 	else
@@ -386,10 +396,12 @@ function onClickFase ()
 {
 	var fase3 = document.getElementById ('fase03');
 	var showVocht = true;
+	/*
 	if (   fase3
-	    && fase3.checked)
+		&& fase3.checked)
 		showVocht = false;
-		
+
+	*/
 	setVisibility ('wondvocht', showVocht);
 }
 
