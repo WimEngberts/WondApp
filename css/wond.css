@@ -2,7 +2,7 @@
  * Copyright (c) 2015, MedLex BV
  */
 {
-    -webkit-tap-highlight-color:rgba(0,0,0,0)
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
 /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
@@ -12,7 +12,7 @@
  
 @font-face
 {
-	font-family: breezeRegular; 
+	font-family: breezeRegular;
 	src: url('../fonts/breezregular-webfont.ttf') format('truetype');
 }
  
@@ -24,10 +24,9 @@
 
 body
 {
-body {
 	padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
 	padding-top: env(safe-area-inset-top); /* iOS 11.2 */
-}}
+}
  
 html
 {
@@ -36,8 +35,8 @@ html
  
 label
 {
-    font-family:breezeLight, arial, helvetica, sans-serif;
-    font-size:medium;
+	font-family:breezeLight, arial, helvetica, sans-serif;
+	font-size:medium;
 	display:inline-block;
 	padding-left:30px;
 	width:auto;
@@ -45,34 +44,34 @@ label
 
 h1
 {
-    font-family:breezeRegular, arial, helvetica, sans-serif;
+	font-family:breezeRegular, arial, helvetica, sans-serif;
 	font-size:large;
 	font-weight:600;
 }
 
 h2
 {
-    font-family:breezeRegular, arial, helvetica, sans-serif;
+	font-family:breezeRegular, arial, helvetica, sans-serif;
 	font-size:medium;
 	font-weight:400;
 }
 
 .light
 {
-    font-family:breezeLight, arial, helvetica, sans-serif;
-    font-size:medium;
+	font-family:breezeLight, arial, helvetica, sans-serif;
+	font-size:medium;
 }
  
 .standard, td, input, p
 {
-    font-family:breezeLight, arial, helvetica, sans-serif;
-    font-size: medium;
+	font-family:breezeLight, arial, helvetica, sans-serif;
+	font-size: medium;
 }
 
 .large, select
 {
-    font-family:breezeRegular, arial, helvetica, sans-serif;
-    font-size:medium;
+	font-family:breezeRegular, arial, helvetica, sans-serif;
+	font-size:medium;
 }
 
 .alrijneRoze
@@ -82,18 +81,17 @@ h2
 
 body
 {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: text;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    
-    background:transparent;
-    margin:0;
-    padding:0;
-    top:0px;
-    left:0px;
-    right:0px;
-    bottom:0px;
-    overflow:hidden;
+	-webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+
+	background:transparent;
+	margin:0;
+	padding:0;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	overflow:hidden;
 /*    font-size: 1em; */
 }
 
