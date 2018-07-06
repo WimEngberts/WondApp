@@ -32,8 +32,9 @@
 	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
 	<preference name="iosPersistentFileLocation" value="Compatibility" />
 	<!-- Plugins to be used. -->
-	<plugin spec="https://github.com/shankari/cordova-plugin-email-composer" source="git" />
-	<plugin spec="https://github.com/apache/cordova-plugin-statusbar" source="git" />
+<!--	<plugin spec="https://github.com/shankari/cordova-plugin-email-composer" source="git" />
+	<plugin spec="https://github.com/apache/cordova-plugin-statusbar" source="git" /> -->
+<!--	<plugin spec="https://github.com/apache/cordova-plugin-splashscreen" source="git" /> -->
 	<!-- Define app icon and splashscreen for each platform. -->
 	<icon   src="res/icon/android/drawable-ldpi-icon.png"     platform="android" density="ldpi"    qualifier="ldpi"   />
 	<icon   src="res/icon/android/drawable-mdpi-icon.png"     platform="android" density="mdpi"    qualifier="mdpi"   />
