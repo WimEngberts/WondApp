@@ -90,6 +90,30 @@ body
 	color:#000000;
 }
 
+.catColumn1
+{
+	float: left;
+	width: 25%;
+	max-width: 25%;
+	padding: 0;
+}
+
+.catColumn2
+{
+	float: left;
+	width: 74%;
+	max-width: 70%;
+	padding-left: 4%;
+}
+
+/* Clear floats after image containers */
+.catRow::after
+{
+	content: "";
+	clear: both;
+	display: table;
+}
+
 #wrapper
 {
 	margin: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);		/* <iOS 11.2 */
