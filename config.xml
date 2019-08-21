@@ -1,8 +1,8 @@
 <widget xmlns="http://www.w3.org/ns/widgets"
 	xmlns:gap="http://phonegap.com/ns/1.0"
 	id="nl.alexanderengberts.wondapp"
-	versionCode="105"
-	version="1.0.5">
+	versionCode="106"
+	version="1.0.6">
 	<name>WondApp</name>
 	<description>Bepalen gewenste handeling bij wondzorg</description>
 	<author href="http://alexanderengberts.nl" email="info@alexanderengberts.nl">MedLex</author>
